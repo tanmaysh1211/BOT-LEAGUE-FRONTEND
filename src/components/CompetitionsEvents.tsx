@@ -1,10 +1,6 @@
 import { upcomingEvents, pastResults } from "../data/content";
-
-// Fixed geometry (in px) so the SVG connector lines land exactly on box
-// centers. Sized to comfortably fit inside a 1-of-3 grid column with no
-// horizontal scroll.
 const BOX_H = 32;
-const GAP = 20; // vertical gap between stacked round-1 boxes
+const GAP = 20; 
 const STEP = BOX_H + GAP;
 
 const R1_X = 0;
@@ -15,12 +11,9 @@ const R3_X = 236;
 const R3_W = 64;
 
 const TOTAL_W = R3_X + R3_W;
-const MID_1 = (R1_X + R1_W + R2_X) / 2; // horizontal midpoint between round 1 & 2
-const MID_2 = (R2_X + R2_W + R3_X) / 2; // horizontal midpoint between round 2 & final
+const MID_1 = (R1_X + R1_W + R2_X) / 2; 
+const MID_2 = (R2_X + R2_W + R3_X) / 2; 
 
-// Round 1 boxes are evenly stacked — every other value below derives from
-// these four tops, so the connector lines always land on the right spot
-// even if you change BOX_H/GAP.
 const round1 = [
   { name: "Ironclad", top: 0 * STEP },
   { name: "Vector-9", top: 1 * STEP },
@@ -31,8 +24,6 @@ const HEIGHT = 3 * STEP + BOX_H;
 
 const center = (top: number) => top + BOX_H / 2;
 
-// Round 2 box centers sit exactly between the two round-1 boxes that feed
-// into them; final sits exactly between the two round-2 boxes.
 const r2c0 = (center(round1[0].top) + center(round1[1].top)) / 2;
 const r2c1 = (center(round1[2].top) + center(round1[3].top)) / 2;
 const finalC = (r2c0 + r2c1) / 2;
