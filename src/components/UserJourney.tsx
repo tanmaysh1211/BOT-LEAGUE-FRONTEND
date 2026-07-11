@@ -1,8 +1,6 @@
 import { journeySteps } from "../data/content";
-// import { TeamIcon, CompeteIcon, RankIcon, JoinIcon } from "./icons";
 import { Wrench,ChartColumn,Trophy,Users} from "lucide-react";
 
-// const ICONS = { team: TeamIcon, compete: CompeteIcon, rank: RankIcon, join: JoinIcon };
 const ICONS = { team: Wrench , compete: ChartColumn , rank: Trophy , join: Users };
 
 export default function UserJourney() {
