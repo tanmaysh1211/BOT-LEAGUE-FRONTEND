@@ -3,17 +3,13 @@ import heroImage from "../assets/hero.png";
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden bg-void pt-28 pb-20 sm:pt-36 sm:pb-28">
-      {/* Background photo */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="BotLeague robotics arena action shot"
           className="h-full w-full scale-125 object-cover object-[center_68%]"
         />
-        {/* Left-to-right fade so the copy panel stays legible over the photo,
-            but tightened so the action on the right stays vivid */}
         <div className="absolute inset-0 bg-linear-to-r from-void from-0% via-void/55 via-45% to-transparent to-70%" />
-        {/* Light top/bottom vignette, kept subtle so it doesn't wash the photo out */}
         <div className="absolute inset-0 bg-linear-to-t from-void/35 via-transparent to-void/25" />
       </div>
 
