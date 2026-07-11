@@ -79,21 +79,18 @@ function LiveBracket() {
           viewBox={`0 0 ${TOTAL_W} ${HEIGHT}`}
           fill="none"
         >
-          {/* Round 1 -> Round 2 (top pair) */}
           <path
             d={`M${R1_X + R1_W},${r1c0} H${MID_1} V${r1c1} H${R1_X + R1_W} M${MID_1},${r2c0} H${R2_X}`}
             style={{ stroke: "var(--color-crimson)" }}
             strokeWidth={2}
             strokeLinejoin="round"
           />
-          {/* Round 1 -> Round 2 (bottom pair) */}
           <path
             d={`M${R1_X + R1_W},${r1c2} H${MID_1} V${r1c3} H${R1_X + R1_W} M${MID_1},${r2c1} H${R2_X}`}
             style={{ stroke: "var(--color-crimson)" }}
             strokeWidth={2}
             strokeLinejoin="round"
           />
-          {/* Round 2 -> Final */}
           <path
             d={`M${R2_X + R2_W},${r2c0} H${MID_2} V${r2c1} H${R2_X + R2_W} M${MID_2},${finalC} H${R3_X}`}
             style={{ stroke: "var(--color-crimson)" }}
@@ -132,7 +129,6 @@ export default function CompetitionsEvents() {
         </h2>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-3">
-          {/* Live now */}
           <div className="flex h-full flex-col border border-line bg-panel-2 p-6">
             <div className="mb-5 flex items-center gap-2">
               <span className="font-tech text-sm font-bold uppercase tracking-widest text-crimson-glow">Live Now</span>
@@ -151,7 +147,6 @@ export default function CompetitionsEvents() {
             </div>
           </div>
 
-          {/* Upcoming */}
           <div className="border border-line bg-panel-2 p-6">
             <p className="mb-5 font-tech text-sm font-bold uppercase tracking-widest text-steel">Upcoming</p>
             <div className="flex flex-col gap-4">
@@ -174,7 +169,6 @@ export default function CompetitionsEvents() {
             </div>
           </div>
 
-          {/* Past results */}
           <div className="border border-line bg-panel-2 p-6">
             <p className="mb-5 font-tech text-sm font-bold uppercase tracking-widest text-steel">Past Results</p>
             <ul className="flex flex-col divide-y divide-line">
