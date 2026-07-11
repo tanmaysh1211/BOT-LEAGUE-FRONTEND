@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-tech: "Rajdhani", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-void: #08080b;
+  --color-panel: #121218;
+  --color-panel-2: #17171f;
+  --color-line: #26262f;
+  --color-steel: #8b8f9e;
+  --color-steel-light: #c2c5d1;
+  --color-crimson: #e8332b;
+  --color-crimson-dark: #9c1a15;
+  --color-crimson-glow: #ff4d3d;
+  --color-gold: #f0b429;
+  --color-gold-dark: #b8830f;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-void);
+    color: var(--color-steel-light);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-crimson);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-tech {
+    font-family: var(--font-tech);
+  }
+  .clip-speed {
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 92% 100%, 0 100%);
+  }
+  .clip-speed-r {
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%, 0 15%);
+  }
+  .bg-circuit {
+    background-image:
+      linear-gradient(var(--color-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-line) 1px, transparent 1px);
+    background-size: 42px 42px;
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  }
+}
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+.animate-pulse-live {
+  animation: pulse-live 1.6s ease-in-out infinite;
+}
