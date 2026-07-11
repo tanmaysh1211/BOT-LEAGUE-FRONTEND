@@ -11,15 +11,12 @@ export default function Footer() {
   return (
     <footer className="border-t border-line bg-black">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-12">
-
-        {/* Quick Links */}
         <div className="relative -top-8">
           <p className="font-tech text-[14px] font-bold uppercase tracking-[0.25em] text-steel">
             QUICK LINKS
           </p>
         </div>
 
-         {/* Right */}
         <div className="flex flex-col items-start">
           <p className="font-tech text-[11px] font-bold uppercase tracking-[0.25em] text-steel">
             SOCIAL MEDIA
